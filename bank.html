@@ -11,10 +11,54 @@
 
 <body>
     <header>
-        <h1 class="text-5xl text-center m-4">Let's Get Some Money From <span
+        <h1 class="text-5xl text-center my-4">Let's Get Some Money From <span
                 class="font-semibold text-amber-700">CreditExo</span></h1>
     </header>
 
+    <main>
+        <section class="my-8">
+            <div class="grid grid-cols-3 gap-6 w-9/12 mx-auto text-white">
+                <div class="bg-green-400 p-8 rounded-xl">
+                    <h4 class="text-3xl">Deposit</h4>
+                    <h3 class="text-5xl">$ <span id="total-deposit">00</span></h3>
+                </div>
+
+                <div class="bg-yellow-400 p-8 rounded-xl">
+                    <h4 class="text-3xl">Withdraw</h4>
+                    <h3 class="text-5xl">$ <span id="total-withdraw">00</span></h3>
+                </div>
+
+                <div class="bg-violet-400 p-8 rounded-xl">
+                    <h4 class="text-3xl">Balance</h4>
+                    <h3 class="text-5xl">$ <span id="total-balance">1240</span></h3>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 w-9/12 mx-auto my-6">
+                <div class="bg-sky-400 p-8 rounded-xl">
+                    <h4 class="text-3xl text-white">Please Deposit</h4>
+
+                    <input class="block w-4/5 px-2 h-12 my-4 rounded-lg" type="text" name="text" id="deposit-balance"
+                        placeholder="$ Amount You want to Deposit">
+                    <button id="deposit-btn"
+                        class="bg-amber-600 px-8 py-2 text-white font-medium rounded-lg hover:bg-amber-900">Deposit</button>
+                </div>
+                <div class="bg-fuchsia-400 p-8 rounded-xl">
+                    <h4 class="text-3xl text-white">Please Withdraw</h4>
+
+                    <input class="block w-4/5 px-2 h-12 my-4 rounded-lg" type="text" name="text" id="withdraw-balance"
+                        placeholder="$ Amount You want to Withdraw">
+                    <button id="withdraw-btn"
+                        class="bg-amber-600 px-8 py-2 text-white font-medium rounded-lg hover:bg-amber-900">Withdraw</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="./js/deposit.js"></script>
+    <script src="./js/withdraw.js"></script>
 </body>
 
 </html>
