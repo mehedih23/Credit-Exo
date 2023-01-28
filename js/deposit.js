@@ -1,14 +1,23 @@
 document.getElementById('deposit-btn').addEventListener('click', function () {
     const depositInput = document.getElementById('deposit-balance');
     const newDepositBalance = depositInput.value;
+    const newDepoBalance = parseFloat(newDepositBalance);
+    depositInput.value = '';
+
+    if (isNaN(newDepoBalance)) {
+        alert('Please provide correct amount')
+        return;
+    }
 
     const prevDepositBalance = document.getElementById('total-deposit');
-    let depositBalance = prevDepositBalance.innerText;
+    const depositBalance = prevDepositBalance.innerText;
+    const depoBalance = parseFloat(depositBalance);
 
     const totalBalance = document.getElementById('total-balance');
-    let prevTotalBalance = totalBalance.innerText;
+    const prevTotal = totalBalance.innerText;
+    const prevTotalBalance = parseFloat(prevTotal);
 
-    prevDepositBalance.innerText = parseFloat(newDepositBalance) + parseFloat(depositBalance);
-    totalBalance.innerText = parseFloat(newDepositBalance) + parseFloat(prevTotalBalance)
-    depositInput.value = '';
+    prevDepositBalance.innerText = newDepoBalance + depoBalance;
+    totalBalance.innerText = newDepoBalance + prevTotalBalance
+
 })
